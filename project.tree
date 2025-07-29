@@ -1,0 +1,17 @@
+├── .gitignore
+├── apps
+├── LICENSE
+├── package.json
+├── packages
+│  ├── array
+│  │  ├── package.json
+│  │  ├── src
+│  │  │  └── index.ts
+│  │  └── tsconfig.json
+│  └── linked-list
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── project.tree
+├── README.md
+├── tsconfig.base.json
+└── tsconfig.json

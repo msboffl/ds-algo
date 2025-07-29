@@ -1,0 +1,14 @@
+{
+  "name": "@ds-algo/array",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+ "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0-0"
+}
