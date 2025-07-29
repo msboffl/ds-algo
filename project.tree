@@ -4,11 +4,39 @@
 ├── package.json
 ├── packages
 │  ├── array
+│  │  ├── dist
+│  │  │  ├── cache
+│  │  │  │  ├── cjs.tsbuildinfo
+│  │  │  │  └── esm.tsbuildinfo
+│  │  │  ├── cjs
+│  │  │  │  ├── index.js
+│  │  │  │  └── index.js.map
+│  │  │  ├── esm
+│  │  │  │  ├── index.js
+│  │  │  │  └── index.js.map
+│  │  │  └── types
+│  │  │    ├── cjs
+│  │  │    │  ├── index.d.ts
+│  │  │    │  └── index.d.ts.map
+│  │  │    └── esm
+│  │  │      ├── index.d.ts
+│  │  │      └── index.d.ts.map
 │  │  ├── package.json
 │  │  ├── src
 │  │  │  └── index.ts
-│  │  └── tsconfig.json
-│  └── linked-list
+│  │  ├── tsconfig.cjs.json
+│  │  └── tsconfig.esm.json
+│  ├── backtracking
+│  ├── dynamic-programming
+│  ├── graph
+│  ├── greedy
+│  ├── linked-list
+│  ├── queue
+│  ├── recursion
+│  ├── searching
+│  ├── sorting
+│  ├── stack
+│  └── tree
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 ├── project.tree
