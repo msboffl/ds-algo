@@ -11,16 +11,17 @@
   ],
   "exports": {
     "import": {
-      "default": "./dist/esm/index.js",
-      "types": "./dist/types/esm/index.d.ts"
+      "types": "./dist/types/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
     },
     "require": {
-      "default": "./dist/cjs/index.js",
-      "types": "./dist/types/cjs/index.d.ts"
+      "types": "./dist/types/cjs/index.d.ts",
+      "default": "./dist/cjs/index.js"
     }
   },
   "scripts": {
     "dev": "tsx watch src/index.ts ",
+    "test": "vitest",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "pnpm run build:cjs && npm run build:esm",
