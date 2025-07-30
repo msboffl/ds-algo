@@ -25,7 +25,10 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "pnpm run build:cjs && npm run build:esm",
     "prepublishOnly": "pnpm run build",
-    "publish": "pnpm publish --access public"
+    "publish": "pnpm publish --access public",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm run build && changeset publish"
   },
   "publishConfig": {
     "access": "public"
