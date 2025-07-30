@@ -1,1 +1,1 @@
-console.log("Array");
+export * as StaticArray from "./StaticArray.js";
