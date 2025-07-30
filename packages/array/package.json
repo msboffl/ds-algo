@@ -4,7 +4,7 @@
   "description": "Array",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
+  "types": "./dist/types/esm/index.d.ts",
   "type": "module",
   "files": [
     "dist"
@@ -12,11 +12,11 @@
   "exports": {
     "import": {
       "default": "./dist/esm/index.js",
-      "types": "./dist/esm/index.d.ts"
+      "types": "./dist/types/esm/index.d.ts"
     },
     "require": {
       "default": "./dist/cjs/index.js",
-      "types": "./dist/esm/index.d.ts"
+      "types": "./dist/types/cjs/index.d.ts"
     }
   },
   "scripts": {

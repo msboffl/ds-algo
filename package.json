@@ -4,7 +4,10 @@
   "description": "Data Structures and Algorithms",
   "main": "index.js",
   "scripts": {
-    "generate:tree": "struct -o project.tree"
+    "generate:tree": "struct -o project.tree",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm run build && changeset publish"
   },
   "repository": {
     "type": "git",
