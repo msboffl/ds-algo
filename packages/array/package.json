@@ -1,7 +1,7 @@
 {
   "name": "@ds-algo/array",
   "version": "0.0.1",
-  "description": "",
+  "description": "Array",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -31,6 +31,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.14.0-0"
 }
