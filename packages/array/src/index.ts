@@ -1,1 +1,1 @@
-export * as StaticArray from "./StaticArray.js";
+export * as StaticArray from './StaticArray.js';
