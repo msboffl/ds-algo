@@ -9,7 +9,8 @@
     "outDir": "./dist/cjs",
     "declaration": true,
     "declarationDir": "./dist/types/cjs",
-    "tsBuildInfoFile": "./dist/cache/cjs.tsbuildinfo"
+    "tsBuildInfoFile": "./dist/cache/cjs.tsbuildinfo",
+    "composite": true
   },
   "include": ["src"]
 }

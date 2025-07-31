@@ -1,3 +1,4 @@
+import util from 'node:util';
 /**
  * A fixed-size static array implementation in TypeScript.
  * Does not support resizing or dynamic operations like push/pop.
@@ -53,15 +54,28 @@ export class StaticArray<T> {
     return this.buffer[index] as T;
   }
 
-  print(): void {
+  // Node.js console.log support (util.inspect)
+  [util.inspect.custom](): string {
+    return this.toArrayString();
+  }
+
+  /**
+   * Prints array in JS-native format using console.log()
+   */
+  private toArrayString(): string {
     let output = '[';
     for (let i = 0; i < this.capacity; i++) {
       if (i > 0) output += ', ';
       output += i in this.buffer ? `${this.buffer[i]}` : undefined;
     }
     output += ']';
-    console.log(output);
+
+    return output;
   }
 }
 
 
+const arr = new StaticArray(4);
+arr.set(0, 5);
+console.log(arr.length);
+console.log(arr);
