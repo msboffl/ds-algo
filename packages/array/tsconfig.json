@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {},
+  "files": [],
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    { "path": "./tsconfig.cjs.json" },
+    { "path": "./tsconfig.esm.json" }
+  ]
+}

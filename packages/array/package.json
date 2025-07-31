@@ -5,7 +5,18 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/esm/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "import": [
+        "./dist/types/esm/index.d.ts"
+      ],
+      "require": [
+        "./dist/types/cjs/index.d.ts"
+      ]
+    }
+  },
   "type": "module",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
@@ -20,11 +31,12 @@
     }
   },
   "scripts": {
-    "dev": "tsx watch src/index.ts ",
+    "dev": "tsx watch src/index.ts",
     "test": "vitest",
+    "clean": "rm -rf dist",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
-    "build": "pnpm run build:cjs && npm run build:esm",
+    "build": "pnpm run clean && (tsc -b || (pnpm run build:cjs && pnpm run build:esm))",
     "prepublishOnly": "pnpm run build",
     "publish": "pnpm publish --access public"
   },
