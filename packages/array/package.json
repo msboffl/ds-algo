@@ -43,6 +43,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@ds-algo/types": "*"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",

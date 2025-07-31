@@ -1,4 +1,6 @@
 import util from 'node:util';
+
+// export class DynamicList<T> implements Collection<T> {}
 /**
  * A fixed-size static array implementation in TypeScript.
  * Does not support resizing or dynamic operations like push/pop.
@@ -73,7 +75,6 @@ export class StaticArray<T> {
     return output;
   }
 }
-
 
 const arr = new StaticArray(4);
 arr.set(0, 5);
