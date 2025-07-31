@@ -5,7 +5,8 @@
     "rootDir": "./src",
     "outDir": "./dist/esm",
     "declarationDir": "./dist/types/esm",
-    "tsBuildInfoFile": "./dist/cache/esm.tsbuildinfo"
+    "tsBuildInfoFile": "./dist/cache/esm.tsbuildinfo",
+    "composite": true
   },
-  "include": ["src"]
+  "include": ["src"],
 }

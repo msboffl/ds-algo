@@ -40,8 +40,12 @@
 │  │  ├── src
 │  │  │  ├── index.ts
 │  │  │  └── StaticArray.ts
+│  │  ├── tests
+│  │  │  └── StaticArray.spec.ts
 │  │  ├── tsconfig.cjs.json
-│  │  └── tsconfig.esm.json
+│  │  ├── tsconfig.esm.json
+│  │  ├── tsconfig.json
+│  │  └── vitest.config.ts
 │  ├── backtracking
 │  ├── dynamic-programming
 │  ├── graph
@@ -52,7 +56,13 @@
 │  ├── searching
 │  ├── sorting
 │  ├── stack
-│  └── tree
+│  ├── tree
+│  └── types
+│    ├── package.json
+│    ├── src
+│    │  └── interfaces
+│    ├── tsconfig.cjs.json
+│    └── tsconfig.esm.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 ├── project.tree
