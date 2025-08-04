@@ -33,7 +33,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "test": "vitest",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist .cache",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "pnpm run clean && (tsc -b || (pnpm run build:cjs && pnpm run build:esm))",
@@ -44,10 +44,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@ds-algo/types": "*"
+    "@ds-algo/types": "workspace:*"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.14.0-0"
+  "packageManager": "pnpm@10.13.1"
 }
