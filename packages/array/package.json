@@ -44,7 +44,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ds-algo/types": "*"
+    "@ds-algo/types": "workspace:*"
   },
   "keywords": [],
   "author": "",

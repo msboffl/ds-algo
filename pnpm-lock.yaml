@@ -31,7 +31,13 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.1.0)(tsx@4.20.3)
 
-  packages/array: {}
+  packages/array:
+    dependencies:
+      '@ds-algo/types':
+        specifier: workspace:*
+        version: link:../types
+
+  packages/types: {}
 
 packages:
 

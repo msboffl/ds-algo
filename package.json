@@ -4,7 +4,7 @@
   "description": "Data Structures and Algorithms",
   "main": "index.js",
   "scripts": {
-    "generate:tree": "struct -o project.tree",
+    "generate:tree": "struct -i dist -i .cache -o project.tree",
     "prettier:check": "prettier --check .",
     "prettier:format": "prettier --write .",
     "changeset": "changeset",
