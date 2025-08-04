@@ -9,11 +9,15 @@
 ├── package.json
 ├── packages
 │  ├── array
-│  │  ├── CHANGELOG.md
-│  │  ├── dist
-│  │  │  ├── cache
+│  │  ├── .cache
+│  │  │  ├── tsbuild
 │  │  │  │  ├── cjs.tsbuildinfo
 │  │  │  │  └── esm.tsbuildinfo
+│  │  │  └── vitest
+│  │  │    └── da39a3ee5e6b4b0d3255bfef95601890afd80709
+│  │  │      └── results.json
+│  │  ├── CHANGELOG.md
+│  │  ├── dist
 │  │  │  ├── cjs
 │  │  │  │  ├── index.js
 │  │  │  │  ├── index.js.map
@@ -58,11 +62,18 @@
 │  ├── stack
 │  ├── tree
 │  └── types
+│    ├── .cache
+│    │  └── tsbuild
+│    │    ├── cjs.tsbuildinfo
+│    │    └── esm.tsbuildinfo
 │    ├── package.json
 │    ├── src
 │    │  └── interfaces
+│    │    ├── Collection.ts
+│    │    └── index.ts
 │    ├── tsconfig.cjs.json
-│    └── tsconfig.esm.json
+│    ├── tsconfig.esm.json
+│    └── tsconfig.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 ├── project.tree
