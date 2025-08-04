@@ -1,7 +1,5 @@
 import util from 'node:util';
 import { Collection } from '@ds-algo/types';
-
-export class DynamicList<T> implements Collection<T> {}
 /**
  * A fixed-size static array implementation in TypeScript.
  * Does not support resizing or dynamic operations like push/pop.
