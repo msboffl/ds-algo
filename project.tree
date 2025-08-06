@@ -10,12 +10,9 @@
 ├── packages
 │  ├── array
 │  │  ├── .cache
-│  │  │  ├── tsbuild
-│  │  │  │  ├── cjs.tsbuildinfo
-│  │  │  │  └── esm.tsbuildinfo
-│  │  │  └── vitest
-│  │  │    └── da39a3ee5e6b4b0d3255bfef95601890afd80709
-│  │  │      └── results.json
+│  │  │  └── tsbuild
+│  │  │    ├── cjs.tsbuildinfo
+│  │  │    └── esm.tsbuildinfo
 │  │  ├── CHANGELOG.md
 │  │  ├── dist
 │  │  │  ├── cjs
@@ -42,6 +39,9 @@
 │  │  ├── package.json
 │  │  ├── README.md
 │  │  ├── src
+│  │  │  ├── ArrayList.ts
+│  │  │  ├── DynamicSizeList.ts
+│  │  │  ├── FixedSizeList.ts
 │  │  │  ├── index.ts
 │  │  │  └── StaticArray.ts
 │  │  ├── tests
@@ -66,11 +66,55 @@
 │    │  └── tsbuild
 │    │    ├── cjs.tsbuildinfo
 │    │    └── esm.tsbuildinfo
+│    ├── dist
+│    │  ├── cjs
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Collection.js
+│    │  │    ├── Collection.js.map
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  ├── esm
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Collection.js
+│    │  │    ├── Collection.js.map
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  └── types
+│    │    ├── cjs
+│    │    │  ├── index.d.ts
+│    │    │  ├── index.d.ts.map
+│    │    │  └── interfaces
+│    │    │    ├── Collection.d.ts
+│    │    │    ├── Collection.d.ts.map
+│    │    │    ├── Iterable.d.ts
+│    │    │    ├── Iterable.d.ts.map
+│    │    │    ├── Iterator.d.ts
+│    │    │    └── Iterator.d.ts.map
+│    │    └── esm
+│    │      ├── index.d.ts
+│    │      ├── index.d.ts.map
+│    │      └── interfaces
+│    │        ├── Collection.d.ts
+│    │        ├── Collection.d.ts.map
+│    │        ├── Iterable.d.ts
+│    │        ├── Iterable.d.ts.map
+│    │        ├── Iterator.d.ts
+│    │        └── Iterator.d.ts.map
 │    ├── package.json
 │    ├── src
+│    │  ├── index.ts
 │    │  └── interfaces
 │    │    ├── Collection.ts
-│    │    └── index.ts
+│    │    ├── Iterable.ts
+│    │    └── Iterator.ts
 │    ├── tsconfig.cjs.json
 │    ├── tsconfig.esm.json
 │    └── tsconfig.json
