@@ -1,20 +1,10 @@
 {
-  "name": "@ds-algo/array",
-  "version": "0.0.3",
-  "description": "Array",
+  "name": "@ds-algo/collection",
+  "version": "0.0.1",
+  "description": "Collection Framework for JS/TS inspired by Java",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/esm/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "import": [
-        "./dist/types/esm/index.d.ts"
-      ],
-      "require": [
-        "./dist/types/cjs/index.d.ts"
-      ]
-    }
-  },
   "type": "module",
   "sideEffects": false,
   "files": [
@@ -42,9 +32,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@ds-algo/types": "workspace:*"
   },
   "keywords": [],
   "author": "",
