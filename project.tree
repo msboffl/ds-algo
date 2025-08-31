@@ -1,0 +1,66 @@
+├── .changeset
+│  ├── config.json
+│  └── README.md
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── LICENSE
+├── package.json
+├── packages
+│  ├── algorithms
+│  └── collections
+│    ├── .cache
+│    │  └── tsbuild
+│    │    ├── cjs.tsbuildinfo
+│    │    └── esm.tsbuildinfo
+│    ├── dist
+│    │  ├── cjs
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  ├── esm
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  └── types
+│    │    ├── cjs
+│    │    │  ├── index.d.ts
+│    │    │  ├── index.d.ts.map
+│    │    │  └── interfaces
+│    │    │    ├── Iterable.d.ts
+│    │    │    ├── Iterable.d.ts.map
+│    │    │    ├── Iterator.d.ts
+│    │    │    └── Iterator.d.ts.map
+│    │    └── esm
+│    │      ├── index.d.ts
+│    │      ├── index.d.ts.map
+│    │      └── interfaces
+│    │        ├── Iterable.d.ts
+│    │        ├── Iterable.d.ts.map
+│    │        ├── Iterator.d.ts
+│    │        └── Iterator.d.ts.map
+│    ├── package.json
+│    ├── src
+│    │  ├── abstracts
+│    │  ├── classes
+│    │  ├── index.ts
+│    │  └── interfaces
+│    │    ├── Iterable.ts
+│    │    └── Iterator.ts
+│    ├── tsconfig.cjs.json
+│    ├── tsconfig.esm.json
+│    └── tsconfig.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── project.tree
+├── README.md
+├── tsconfig.base.json
+└── tsconfig.json
