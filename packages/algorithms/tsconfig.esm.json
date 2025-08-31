@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "nodenext",
+    "rootDir": "./src",
+    "outDir": "./dist/esm",
+    "declarationDir": "./dist/types/esm",
+    "tsBuildInfoFile": "./.cache/tsbuild/esm.tsbuildinfo",
+    "composite": true
+  },
+  "include": ["src"],
+}
