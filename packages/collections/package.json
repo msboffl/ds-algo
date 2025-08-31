@@ -1,6 +1,6 @@
 {
   "name": "@ds-algo/collections",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "Collection Framework for JS/TS inspired by Java",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -8,7 +8,8 @@
   "type": "module",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "exports": {
     "import": {
