@@ -4,78 +4,63 @@
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc
-├── apps
 ├── LICENSE
 ├── package.json
 ├── packages
-│  ├── array
-│  │  ├── .cache
-│  │  │  ├── tsbuild
-│  │  │  │  ├── cjs.tsbuildinfo
-│  │  │  │  └── esm.tsbuildinfo
-│  │  │  └── vitest
-│  │  │    └── da39a3ee5e6b4b0d3255bfef95601890afd80709
-│  │  │      └── results.json
-│  │  ├── CHANGELOG.md
-│  │  ├── dist
-│  │  │  ├── cjs
-│  │  │  │  ├── index.js
-│  │  │  │  ├── index.js.map
-│  │  │  │  ├── StaticArray.js
-│  │  │  │  └── StaticArray.js.map
-│  │  │  ├── esm
-│  │  │  │  ├── index.js
-│  │  │  │  ├── index.js.map
-│  │  │  │  ├── StaticArray.js
-│  │  │  │  └── StaticArray.js.map
-│  │  │  └── types
-│  │  │    ├── cjs
-│  │  │    │  ├── index.d.ts
-│  │  │    │  ├── index.d.ts.map
-│  │  │    │  ├── StaticArray.d.ts
-│  │  │    │  └── StaticArray.d.ts.map
-│  │  │    └── esm
-│  │  │      ├── index.d.ts
-│  │  │      ├── index.d.ts.map
-│  │  │      ├── StaticArray.d.ts
-│  │  │      └── StaticArray.d.ts.map
-│  │  ├── package.json
-│  │  ├── README.md
-│  │  ├── src
-│  │  │  ├── index.ts
-│  │  │  └── StaticArray.ts
-│  │  ├── tests
-│  │  │  └── StaticArray.spec.ts
-│  │  ├── tsconfig.cjs.json
-│  │  ├── tsconfig.esm.json
-│  │  ├── tsconfig.json
-│  │  └── vitest.config.ts
-│  ├── backtracking
-│  ├── dynamic-programming
-│  ├── graph
-│  ├── greedy
-│  ├── linked-list
-│  ├── queue
-│  ├── recursion
-│  ├── searching
-│  ├── sorting
-│  ├── stack
-│  ├── tree
-│  └── types
+│  ├── algorithms
+│  └── collections
 │    ├── .cache
 │    │  └── tsbuild
 │    │    ├── cjs.tsbuildinfo
 │    │    └── esm.tsbuildinfo
+│    ├── dist
+│    │  ├── cjs
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  ├── esm
+│    │  │  ├── index.js
+│    │  │  ├── index.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Iterable.js
+│    │  │    ├── Iterable.js.map
+│    │  │    ├── Iterator.js
+│    │  │    └── Iterator.js.map
+│    │  └── types
+│    │    ├── cjs
+│    │    │  ├── index.d.ts
+│    │    │  ├── index.d.ts.map
+│    │    │  └── interfaces
+│    │    │    ├── Iterable.d.ts
+│    │    │    ├── Iterable.d.ts.map
+│    │    │    ├── Iterator.d.ts
+│    │    │    └── Iterator.d.ts.map
+│    │    └── esm
+│    │      ├── index.d.ts
+│    │      ├── index.d.ts.map
+│    │      └── interfaces
+│    │        ├── Iterable.d.ts
+│    │        ├── Iterable.d.ts.map
+│    │        ├── Iterator.d.ts
+│    │        └── Iterator.d.ts.map
 │    ├── package.json
 │    ├── src
+│    │  ├── abstracts
+│    │  ├── classes
+│    │  ├── index.ts
 │    │  └── interfaces
-│    │    ├── Collection.ts
-│    │    └── index.ts
+│    │    ├── Iterable.ts
+│    │    └── Iterator.ts
 │    ├── tsconfig.cjs.json
 │    ├── tsconfig.esm.json
 │    └── tsconfig.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
+├── project.old.tree
 ├── project.tree
 ├── README.md
 ├── tsconfig.base.json
