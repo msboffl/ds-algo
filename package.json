@@ -6,10 +6,7 @@
   "scripts": {
     "generate:tree": "struct -o project.tree",
     "prettier:check": "prettier --check .",
-    "prettier:format": "prettier --write .",
-    "changeset": "changeset",
-    "change:version": "changeset version",
-    "release": "changeset publish"
+    "prettier:format": "prettier --write ."
   },
   "repository": {
     "type": "git",
