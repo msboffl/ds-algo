@@ -27,8 +27,7 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "pnpm run clean && (tsc -b || (pnpm run build:cjs && pnpm run build:esm))",
-    "prepublishOnly": "pnpm run build",
-    "publish": "pnpm publish --access public"
+    "prepublishOnly": "pnpm run build"
   },
   "publishConfig": {
     "access": "public"

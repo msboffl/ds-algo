@@ -6,10 +6,7 @@
   "scripts": {
     "generate:tree": "struct -o project.tree",
     "prettier:check": "prettier --check .",
-    "prettier:format": "prettier --write .",
-    "changeset": "changeset",
-    "change:version": "changeset version",
-    "release": "changeset publish"
+    "prettier:format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -27,7 +24,6 @@
   },
   "homepage": "https://github.com/msboffl/ds-algo#readme",
   "devDependencies": {
-    "@changesets/cli": "^2.29.5",
     "@types/node": "^24.1.0",
     "prettier": "^3.6.2",
     "tsx": "^4.20.3",
