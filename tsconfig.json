@@ -2,15 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "@ds-algo/types": ["packages/types/src"]
-    }
+    "paths": {}
   },
   "files": [],
   "include": [],
-  "references": [
-    { "path": "./packages/array" },
-    { "path": "./packages/types" },
-    {}
-  ]
+  "references": []
 }
