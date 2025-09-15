@@ -8,5 +8,5 @@
     "tsBuildInfoFile": "./.cache/tsbuild/esm.tsbuildinfo",
     "composite": true
   },
-  "include": ["src"],
+  "include": ["src"]
 }
