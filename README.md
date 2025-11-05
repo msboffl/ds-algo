@@ -1,24 +1,20 @@
 # Data Structures and Algorithms Library
 
-A comprehensive TypeScript library implementing fundamental data structures and algorithms, inspired by Java's Collections Framework. Built with modern TypeScript practices and comprehensive testing.
+A TypeScript monorepo for data structures and algorithms, inspired by Java's Collections Framework. Managed with pnpm workspaces, typed with TypeScript, and tested with Vitest.
 
 ## 📦 Packages
 
 This monorepo contains the following packages:
 
-- **`@ds-algo/collections`** - Collection framework with interfaces and implementations
-  - Core interfaces (Collection, Iterable, Iterator)
-  - Abstract base classes (planned)
-  - Concrete implementations (planned)
-  - Collection-specific algorithms (planned)
+- **`@ds-algo/collections`** — Collection framework
+  - Core interfaces: `Collection`, `Iterable`, `Iterator`, `List` (done)
+  - Abstract base classes: `AbstractCollection`, `AbstractList` (done)
+  - Concrete implementations: `ArrayList` (done), more planned
+  - Utilities: `Collections` aggregator (done)
 
-- **`@ds-algo/algorithms`** - Algorithm implementations
-  - Sorting algorithms (Quick Sort, Merge Sort, Bubble Sort, Heap Sort)
-  - Searching algorithms (Binary Search, Linear Search, Depth First Search)
-  - Graph algorithms (Dijkstra, BFS, DFS, Topological Sort)
-  - Dynamic programming solutions (Fibonacci, LCS, Knapsack)
-  - String algorithms (KMP, Boyer-Moore, Rabin-Karp) - planned
-  - Mathematical algorithms (GCD, LCM, Prime factorization) - planned
+- **`@ds-algo/algorithms`** — Algorithms library
+  - Package scaffold, build config, and tests setup present
+  - Algorithm modules planned; exports not finalized yet
 
 ## 🏗️ Project Structure
 
@@ -26,22 +22,17 @@ This monorepo contains the following packages:
 packages/
 ├── collections/          # Collection framework
 │   ├── src/
-│   │   ├── interfaces/   # Core interfaces (Collection, Iterable, Iterator)
-│   │   ├── abstracts/    # Abstract base classes (planned)
-│   │   ├── classes/      # Concrete implementations (planned)
-│   │   └── algorithms/   # Collection-specific algorithms (planned)
-│   ├── tests/           # Test files
-│   └── README.md        # Package documentation
-└── algorithms/          # Algorithm implementations
+│   │   ├── interfaces/   # Core interfaces (Collection, Iterable, Iterator, List)
+│   │   ├── abstracts/    # Abstract base classes (AbstractCollection, AbstractList)
+│   │   ├── classes/      # Concrete implementations (ArrayList, Collections)
+│   │   └── index.ts      # Main exports
+│   ├── tests/            # Unit tests (e.g., ArrayList.test.ts)
+│   └── README.md         # Package documentation
+└── algorithms/           # Algorithm implementations (scaffolded)
     ├── src/
-    │   ├── sorting/     # Sorting algorithms (planned)
-    │   ├── searching/   # Searching algorithms (planned)
-    │   ├── graph/       # Graph algorithms (planned)
-    │   ├── dynamic-programming/ # DP solutions (planned)
-    │   ├── utils/       # Utility functions (planned)
-    │   └── index.ts     # Main exports
-    ├── tests/           # Test files
-    └── README.md        # Package documentation
+    │   └── index.ts      # Main exports (TBD)
+    ├── tests/            # Test files
+    └── README.md         # Package documentation
 ```
 
 ## 🚀 Getting Started
@@ -55,17 +46,36 @@ packages/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ds-algo.git
+git clone https://github.com/msboffl/ds-algo.git
 cd ds-algo
 
-# Install dependencies
+# Install workspace dependencies
 pnpm install
 
-# Build all packages
-pnpm run build
+# (Optional) Generate a fresh project tree snapshot
+pnpm run generate:tree
+```
 
-# Run tests
-pnpm run test
+### Build
+
+```bash
+# Build all workspaces (recursive)
+pnpm -r run build
+
+# Build a specific package
+pnpm --filter @ds-algo/collections run build
+pnpm --filter @ds-algo/algorithms run build
+```
+
+### Test
+
+```bash
+# Run all package tests (recursive)
+pnpm -r run test
+
+# Run tests in a specific package
+pnpm --filter @ds-algo/collections run test
+pnpm --filter @ds-algo/algorithms run test
 ```
 
 ### Usage
@@ -73,114 +83,74 @@ pnpm run test
 #### Collections Package
 
 ```typescript
-import { Collection, Iterable, Iterator } from '@ds-algo/collections';
+import { ArrayList, List } from '@ds-algo/collections';
 
-// Define a custom collection
-class MyCollection<T> implements Collection<T> {
-  private items: T[] = [];
-
-  iterator(): Iterator<T> {
-    return new MyIterator(this.items);
-  }
-}
-
-// Use the collection interfaces
-const collection: Collection<number> = new MyCollection<number>();
+const list: List<number> = new ArrayList<number>();
+list.add(1);
+list.add(2);
 ```
 
 #### Algorithms Package
 
-```typescript
-import { quickSort, binarySearch, dijkstra } from '@ds-algo/algorithms';
-
-// Sorting
-const numbers = [64, 34, 25, 12, 22, 11, 90];
-const sortedNumbers = quickSort(numbers);
-
-// Searching
-const index = binarySearch(sortedNumbers, 25);
-
-// Graph algorithms
-const graph = { A: { B: 4, C: 2 }, B: { A: 4, C: 1, D: 5 } };
-const shortestPaths = dijkstra(graph, 'A');
-```
+Exports are being stabilized. Examples will be added as implementations land.
 
 ## 🛠️ Development
 
-### Available Scripts
+### Useful Commands
 
 ```bash
-# Build all packages
-pnpm run build
-
-# Build individual packages
-pnpm run build --filter @ds-algo/collections
-pnpm run build --filter @ds-algo/algorithms
-
-# Run tests
-pnpm run test
-
-# Run tests for specific package
-pnpm run test --filter @ds-algo/collections
-
-# Development mode with hot reload
-pnpm run dev
-
-# Clean build artifacts
-pnpm run clean
-
-# Format code
+# Format repository
 pnpm run prettier:format
 
-# Lint code
-pnpm run lint
+# Check formatting
+pnpm run prettier:check
+
+# Package dev mode (example)
+pnpm --filter @ds-algo/collections run dev
+
+# Clean build artifacts (package level)
+pnpm --filter @ds-algo/collections run clean
 ```
 
 ### Development Workflow
 
-1. **Adding New Data Structures** (Collections package):
-   - Create interface in `packages/collections/src/interfaces/`
-   - Create abstract base class in `packages/collections/src/abstracts/`
-   - Create concrete implementation in `packages/collections/src/classes/`
-   - Add tests in `packages/collections/tests/`
+1. **Collections**
+   - Add/extend interfaces in `packages/collections/src/interfaces/`
+   - Implement shared logic in `packages/collections/src/abstracts/`
+   - Implement concrete classes in `packages/collections/src/classes/`
+   - Add tests under `packages/collections/src/tests/`
    - Export from `packages/collections/src/index.ts`
 
-2. **Adding New Algorithms** (Algorithms package):
-   - Create algorithm file in appropriate category directory
-   - Export from category's index file
-   - Add comprehensive JSDoc comments with complexity analysis
-   - Write unit tests covering various scenarios
-   - Update package README with usage examples
+2. **Algorithms**
+   - Implement algorithms under category folders (to be introduced)
+   - Export from `packages/algorithms/src/index.ts`
+   - Add tests under `packages/algorithms/tests/`
+   - Document usage in `packages/algorithms/README.md`
 
 ### Testing Strategy
 
-Each package includes:
+Each package includes or plans to include:
 
 - Unit tests with various input sizes
 - Edge case testing
-- Performance benchmarks
+- Performance checks where appropriate
 - Type safety verification
-- Memory usage analysis
 
 ## 📊 Current Status
 
 ### Collections Package
 
-- ✅ Core interfaces implemented (Collection, Iterable, Iterator)
-- ✅ Package structure and build configuration
-- ✅ TypeScript support with comprehensive type definitions
-- 🔄 Abstract base classes (in progress)
-- 🔄 Concrete implementations (planned)
-- 🔄 Collection-specific algorithms (planned)
+- ✅ Core interfaces implemented (Collection, Iterable, Iterator, List)
+- ✅ Abstract base classes implemented (AbstractCollection, AbstractList)
+- ✅ `ArrayList` implemented; `Collections` utilities available
+- 🔄 Additional concrete structures (LinkedList, Set, Map) planned
+- 🔄 Collection-specific algorithms planned
 
 ### Algorithms Package
 
 - ✅ Package structure and build configuration
-- ✅ Comprehensive documentation and roadmap
-- 🔄 Sorting algorithms (in progress)
-- 🔄 Searching algorithms (in progress)
-- 🔄 Graph algorithms (planned)
-- 🔄 Dynamic programming solutions (planned)
+- 🔄 Algorithm implementations under development
+- 🔄 Exports and API surface to be finalized
 
 ## 🎯 Features
 
@@ -202,73 +172,67 @@ Each package includes:
 
 ## 📚 Documentation
 
-- **[Collections Package](./packages/collections/README.md)** - Collection framework documentation
-- **[Algorithms Package](./packages/algorithms/README.md)** - Algorithms library documentation
-- **[API Reference](./docs/api.md)** - Complete API documentation (planned)
-- **[Performance Benchmarks](./docs/benchmarks.md)** - Algorithm performance comparisons (planned)
+- **[Collections Package](./packages/collections/README.md)** — Collection framework
+- **[Algorithms Package](./packages/algorithms/README.md)** — Algorithms library
+- API reference and benchmarks are planned under `docs/`.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) if available.
 
 ### Quick Start for Contributors
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes with proper tests
-4. Ensure all tests pass (`pnpm run test`)
+3. Make your changes with appropriate tests
+4. Ensure all tests pass (`pnpm -r run test`)
 5. Submit a pull request
 
 ### Development Guidelines
 
 - Follow TypeScript best practices
 - Write comprehensive tests for new features
-- Include JSDoc comments for all public APIs
+- Include JSDoc comments for public APIs
 - Update relevant documentation
 - Ensure code formatting with Prettier
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - Inspired by Java's Collections Framework
 - Built with modern TypeScript practices
-- Comprehensive testing with Vitest
+- Testing with Vitest
 - Monorepo management with pnpm workspaces
 
 ## 📈 Roadmap
 
-### Short Term (Next 3 months)
+### Short Term
 
-- [ ] Implement core collection classes (ArrayList, LinkedList, HashSet)
-- [ ] Add basic sorting algorithms (Quick Sort, Merge Sort)
-- [ ] Add searching algorithms (Binary Search, Linear Search)
-- [ ] Add comprehensive test coverage
-- [ ] Add performance benchmarks
+- [ ] Add LinkedList, Stack, Queue to collections
+- [ ] Establish algorithms module layout and initial exports
+- [ ] Basic sorting/searching algorithms
+- [ ] Expand unit tests
 
-### Medium Term (3-6 months)
+### Medium Term
 
-- [ ] Add graph algorithms (Dijkstra, BFS, DFS)
-- [ ] Add dynamic programming solutions
-- [ ] Add string algorithms
-- [ ] Add mathematical algorithms
-- [ ] Add algorithm visualization tools
+- [ ] Graph and dynamic programming algorithms
+- [ ] String and mathematical algorithms
+- [ ] Performance benchmarks
 
-### Long Term (6+ months)
+### Long Term
 
-- [ ] Add advanced data structures (B-trees, Red-black trees)
-- [ ] Add parallel algorithms
-- [ ] Add machine learning algorithms
-- [ ] Add comprehensive documentation site
-- [ ] Add interactive examples and demos
+- [ ] Advanced data structures (trees, heaps, tries)
+- [ ] Parallel/optimized variants
+- [ ] Documentation site and interactive examples
 
 ## 🔗 Related Projects
 
-- **[TypeScript Collections](https://github.com/basarat/typescript-collections)** - Alternative TypeScript collections library
-- **[Algorithms.js](https://github.com/trekhleb/javascript-algorithms)** - JavaScript algorithms and data structures
-- **[Data Structures and Algorithms in TypeScript](https://github.com/amejiarosario/dsa.js)** - DSA implementation in TypeScript
+- **TypeScript Collections** — `https://github.com/basarat/typescript-collections`
+- **javascript-algorithms** — `https://github.com/trekhleb/javascript-algorithms`
+- **dsa.js** — `https://github.com/amejiarosario/dsa.js`
 
 ---
 
