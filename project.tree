@@ -19,6 +19,7 @@
 │  │  ├── tsconfig.esm.json
 │  │  └── tsconfig.json
 │  └── collections
+│    ├── __tests__
 │    ├── .cache
 │    │  └── tsbuild
 │    │    ├── cjs.tsbuildinfo
@@ -28,130 +29,71 @@
 │    │  ├── cjs
 │    │  │  ├── abstracts
 │    │  │  │  ├── AbstractCollection.js
-│    │  │  │  ├── AbstractCollection.js.map
-│    │  │  │  ├── AbstractList.js
-│    │  │  │  └── AbstractList.js.map
+│    │  │  │  └── AbstractCollection.js.map
 │    │  │  ├── classes
-│    │  │  │  ├── ArrayList.js
-│    │  │  │  ├── ArrayList.js.map
 │    │  │  │  ├── Collections.js
 │    │  │  │  ├── Collections.js.map
 │    │  │  │  ├── index.js
 │    │  │  │  └── index.js.map
 │    │  │  ├── index.js
 │    │  │  ├── index.js.map
-│    │  │  ├── interfaces
-│    │  │  │  ├── Collection.js
-│    │  │  │  ├── Collection.js.map
-│    │  │  │  ├── Iterable.js
-│    │  │  │  ├── Iterable.js.map
-│    │  │  │  ├── Iterator.js
-│    │  │  │  ├── Iterator.js.map
-│    │  │  │  ├── List.js
-│    │  │  │  └── List.js.map
-│    │  │  └── tests
-│    │  │    ├── ArrayList.test.js
-│    │  │    └── ArrayList.test.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Collection.js
+│    │  │    └── Collection.js.map
 │    │  ├── esm
 │    │  │  ├── abstracts
 │    │  │  │  ├── AbstractCollection.js
-│    │  │  │  ├── AbstractCollection.js.map
-│    │  │  │  ├── AbstractList.js
-│    │  │  │  └── AbstractList.js.map
+│    │  │  │  └── AbstractCollection.js.map
 │    │  │  ├── classes
-│    │  │  │  ├── ArrayList.js
-│    │  │  │  ├── ArrayList.js.map
 │    │  │  │  ├── Collections.js
 │    │  │  │  ├── Collections.js.map
 │    │  │  │  ├── index.js
 │    │  │  │  └── index.js.map
 │    │  │  ├── index.js
 │    │  │  ├── index.js.map
-│    │  │  ├── interfaces
-│    │  │  │  ├── Collection.js
-│    │  │  │  ├── Collection.js.map
-│    │  │  │  ├── Iterable.js
-│    │  │  │  ├── Iterable.js.map
-│    │  │  │  ├── Iterator.js
-│    │  │  │  ├── Iterator.js.map
-│    │  │  │  ├── List.js
-│    │  │  │  └── List.js.map
-│    │  │  └── tests
-│    │  │    ├── ArrayList.test.js
-│    │  │    └── ArrayList.test.js.map
+│    │  │  └── interfaces
+│    │  │    ├── Collection.js
+│    │  │    └── Collection.js.map
 │    │  └── types
 │    │    ├── cjs
 │    │    │  ├── abstracts
 │    │    │  │  ├── AbstractCollection.d.ts
-│    │    │  │  ├── AbstractCollection.d.ts.map
-│    │    │  │  ├── AbstractList.d.ts
-│    │    │  │  └── AbstractList.d.ts.map
+│    │    │  │  └── AbstractCollection.d.ts.map
 │    │    │  ├── classes
-│    │    │  │  ├── ArrayList.d.ts
-│    │    │  │  ├── ArrayList.d.ts.map
 │    │    │  │  ├── Collections.d.ts
 │    │    │  │  ├── Collections.d.ts.map
 │    │    │  │  ├── index.d.ts
 │    │    │  │  └── index.d.ts.map
 │    │    │  ├── index.d.ts
 │    │    │  ├── index.d.ts.map
-│    │    │  ├── interfaces
-│    │    │  │  ├── Collection.d.ts
-│    │    │  │  ├── Collection.d.ts.map
-│    │    │  │  ├── Iterable.d.ts
-│    │    │  │  ├── Iterable.d.ts.map
-│    │    │  │  ├── Iterator.d.ts
-│    │    │  │  ├── Iterator.d.ts.map
-│    │    │  │  ├── List.d.ts
-│    │    │  │  └── List.d.ts.map
-│    │    │  └── tests
-│    │    │    ├── ArrayList.test.d.ts
-│    │    │    └── ArrayList.test.d.ts.map
+│    │    │  └── interfaces
+│    │    │    ├── Collection.d.ts
+│    │    │    └── Collection.d.ts.map
 │    │    └── esm
 │    │      ├── abstracts
 │    │      │  ├── AbstractCollection.d.ts
-│    │      │  ├── AbstractCollection.d.ts.map
-│    │      │  ├── AbstractList.d.ts
-│    │      │  └── AbstractList.d.ts.map
+│    │      │  └── AbstractCollection.d.ts.map
 │    │      ├── classes
-│    │      │  ├── ArrayList.d.ts
-│    │      │  ├── ArrayList.d.ts.map
 │    │      │  ├── Collections.d.ts
 │    │      │  ├── Collections.d.ts.map
 │    │      │  ├── index.d.ts
 │    │      │  └── index.d.ts.map
 │    │      ├── index.d.ts
 │    │      ├── index.d.ts.map
-│    │      ├── interfaces
-│    │      │  ├── Collection.d.ts
-│    │      │  ├── Collection.d.ts.map
-│    │      │  ├── Iterable.d.ts
-│    │      │  ├── Iterable.d.ts.map
-│    │      │  ├── Iterator.d.ts
-│    │      │  ├── Iterator.d.ts.map
-│    │      │  ├── List.d.ts
-│    │      │  └── List.d.ts.map
-│    │      └── tests
-│    │        ├── ArrayList.test.d.ts
-│    │        └── ArrayList.test.d.ts.map
+│    │      └── interfaces
+│    │        ├── Collection.d.ts
+│    │        └── Collection.d.ts.map
 │    ├── package.json
 │    ├── README.md
 │    ├── src
 │    │  ├── abstracts
-│    │  │  ├── AbstractCollection.ts
-│    │  │  └── AbstractList.ts
+│    │  │  └── AbstractCollection.ts
 │    │  ├── classes
-│    │  │  ├── ArrayList.ts
 │    │  │  ├── Collections.ts
 │    │  │  └── index.ts
 │    │  ├── index.ts
-│    │  ├── interfaces
-│    │  │  ├── Collection.ts
-│    │  │  ├── Iterable.ts
-│    │  │  ├── Iterator.ts
-│    │  │  └── List.ts
-│    │  └── tests
-│    │    └── ArrayList.test.ts
+│    │  └── interfaces
+│    │    └── Collection.ts
 │    ├── tsconfig.cjs.json
 │    ├── tsconfig.esm.json
 │    └── tsconfig.json
